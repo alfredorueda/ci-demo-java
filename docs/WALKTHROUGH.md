@@ -123,13 +123,18 @@ jobs:
     name: Run domain tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "21"
           cache: maven
-      - run: ./mvnw -B -ntp clean test
+
+      - name: Run tests
+        run: ./mvnw -B -ntp clean test
 ```
 
 In plain English: every time someone pushes to `main`, or opens/updates a
