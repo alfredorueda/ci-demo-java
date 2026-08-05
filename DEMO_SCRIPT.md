@@ -7,6 +7,17 @@ end to end.
 
 ## Before starting
 
+- [ ] **Fork the repo, then clone your fork** — not this one. Cloning
+      `alfredorueda/ci-demo-java` directly won't let you push branches or
+      open pull requests, since you don't have write access to it:
+      1. On GitHub, go to `https://github.com/alfredorueda/ci-demo-java`
+         and click **Fork** (top-right).
+      2. Clone *your* fork, replacing `<your-username>`:
+         ```bash
+         git clone https://github.com/<your-username>/ci-demo-java.git
+         cd ci-demo-java
+         ```
+      Every command below runs inside your fork.
 - [ ] On `main`, terminal open, the repository's **Actions** tab open in a
       browser tab.
 - [ ] Confirm the baseline:
