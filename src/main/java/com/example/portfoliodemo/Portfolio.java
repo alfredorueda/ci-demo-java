@@ -57,6 +57,7 @@ public class Portfolio {
                     "Cannot buy %d %s: cost %s exceeds cash balance %s"
                             .formatted(quantity, ticker, cost, cash));
         }
+        //ahora está ok
         cash = cash.subtract(cost);
         lots.computeIfAbsent(ticker, t -> new ArrayDeque<>()).addLast(new Lot(quantity, price));
     }
